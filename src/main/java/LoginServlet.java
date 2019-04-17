@@ -6,7 +6,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/login")
-public class Login extends HttpServlet {
+public class LoginServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         request.getRequestDispatcher("/login.jsp").forward(request, response);
@@ -19,6 +19,8 @@ public class Login extends HttpServlet {
             String password = request.getParameter("password");
             if (username.equals("admin") && password.equals("password")) {
                 response.sendRedirect("/profile");
+            } else {
+                response.sendRedirect("/login");
             }
         }
     }

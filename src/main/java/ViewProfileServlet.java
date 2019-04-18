@@ -9,9 +9,9 @@ import java.io.IOException;
 public class ViewProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        if (request.getSession().getAttribute("user") != null) {
+        if (request.getSession().getAttribute("username") != null) {
             request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
-        } else {
+        } else {  //only need to change to WEB-INF here in the 'profile' servlet
             response.sendRedirect("/login");
         }
 

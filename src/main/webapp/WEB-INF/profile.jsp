@@ -12,10 +12,10 @@
     <div class="container">
         <%--<h1>Welcome, ${user}! Viewing your profile.</h1>--%>
         <%-- Above will work, but better to use below so you know that it's a session value --%>
-            <h1>Welcome, ${sessionScope.user}! Viewing your profile.</h1>
+            <h1>Welcome, ${sessionScope.username}! Viewing your profile.</h1>
     </div>
 
-    <button><a href="/logout">Logout</a></button>
+    <%--<button><a href="/logout">Logout</a></button>--%>
 
 </body>
 </html>
